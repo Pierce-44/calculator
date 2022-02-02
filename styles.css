@@ -1,0 +1,153 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src: url(digital-7.ttf);
+   }
+
+body {
+    display: grid;
+    /* justify-content: center; */
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    background-color: rgba(0, 42, 61, 0.966);
+    width: 355px;
+    gap: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#link {
+    padding-top: 7px;
+    text-decoration: none;
+    font-family: digital-clock-font;
+    font-size: 20px;
+}
+
+.container {
+    margin: 0px;
+    background-color: rgb(26, 26, 26);
+    border-radius: 40px;
+    padding: 30px;
+    box-shadow: 0px 0px 2px #000000, inset 0px 0px 6px rgb(214, 214, 214);
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 30px;
+}
+
+.firstBtnRow, .secondBtnRow, .thirdBtnRow, .forthBtnRow, .fithBtnRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+button {
+    border-radius: 50%;
+    background-color: #00aa26;
+    border: none;
+    color: white;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 35px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px #000000, inset 4px 4px 15px #51ff76;
+    /* box-shadow: 3px 3px 10px #000000; */
+}
+
+#AC, #C, #percentage {
+    background-color: rgb(77, 77, 77);
+    box-shadow: 0px 0px 10px #000000, inset 4px 4px 15px rgb(148, 148, 148);
+    font-size: 25px;
+}
+
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #decimal {
+    background-color: #d4d4d2;
+    color: rgb(61, 61, 61);
+    box-shadow: 5px 5px 10px #000000, inset 4px 4px 15px rgb(100, 100, 100);
+    font-size: 35px;
+}
+
+#zero {
+    height: 60px;
+    width: 135px;
+    border-radius: 50px;
+    background-color: #d4d4d2;
+    color: rgb(49, 49, 49);
+    box-shadow: 5px 5px 10px #000000, inset 4px 4px 15px rgb(100, 100, 100);
+    font-size: 35px;
+}
+
+.displays {
+    box-shadow: 0px 0px 10px rgb(172, 172, 172);
+    border-radius: 20px;
+    font-family: digital-clock-font;
+}
+
+
+#subDisplay {
+    height: 25px;
+    width: 275px;
+    text-align: right;
+    background-color: #505050;
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#display {
+    color: white;
+    height: 60px;
+    width: 275px;
+    text-align: right;
+    background-color: #505050;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 60px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    /* box-shadow: 3px 3px 3px -3px #999, 3px 3px 3px -3px #999, -3px 3px 3px -3px #999; */
+}
+
+
+button:hover {
+    transform: scale(1.1);
+    color: rgb(255, 0, 128);
+    text-shadow: 0px 0px 3px rgb(224, 224, 224);
+  }
+
+  #zero:hover, #one:hover, #two:hover, #three:hover, #four:hover, #five:hover, #six:hover, #seven:hover, #eight:hover, #nine:hover, #decimal:hover {
+      color: rgb(255, 81, 0);
+  }
+
+#AC:hover, #C:hover, #percentage:hover {
+    color: rgb(0, 204, 255);
+} 
+
+#logo {
+    width: auto;
+    height: 32px;
+}
+
+#link {
+    color: white;
+}
