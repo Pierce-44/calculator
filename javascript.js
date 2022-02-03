@@ -20,18 +20,15 @@ function addition() {
         y = parseFloat(variable.join(""));
         variable = [];
         answer = x + y;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
         y = "";
         operator = "";
     } else if (answer === "" && y !== "") {
         answer = x + y;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
         y = "";
     } else if (answer !== "") {
         answer += x;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
     } 
 };
@@ -48,19 +45,16 @@ function subtraction() {
         z = Math.abs(y);
         variable = [];
         answer = x - z;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
         y = "";
         operator = "";
     } else if (answer === "" && y !== "") {
         z = Math.abs(y);
         answer = x - z;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
         y = "";
     } else if (answer !== "") {
         answer -= x;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
     } 
 };
@@ -76,18 +70,15 @@ function multiplication() {
         y = parseFloat(variable.join(""));
         variable = [];
         answer = x * y;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
         y = "";
         operator = "";
     } else if (answer === "" && y !== "") {
         answer = x * y;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
         y = "";
     } else if (answer !== "") {
         answer *= x;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
     } 
 };
@@ -103,18 +94,15 @@ function division() {
         y = parseFloat(variable.join(""));
         variable = [];
         answer = x / y;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
         y = "";
         operator = "";
     } else if (answer === "" && y !== "") {
         answer = x / y;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
         y = "";
     } else if (answer !== "") {
         answer /= x;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
     } 
 };
@@ -129,7 +117,6 @@ function equals() {
         z = Math.abs(x)
         variable = [];
         answer -= z;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
     } else if (operator === "+" && answer === "") {
         operator = "=";
@@ -138,7 +125,6 @@ function equals() {
         x = parseFloat(variable.join(""));
         variable = [];
         answer += x;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
     } else if (operator === "x" && answer === "") {
         operator = "=";
@@ -147,7 +133,6 @@ function equals() {
         x = parseFloat(variable.join(""));
         variable = [];
         answer *= x;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
     } else if (operator === "÷" && answer === "") {
         operator = "=";
@@ -156,13 +141,11 @@ function equals() {
         x = parseFloat(variable.join(""));
         variable = [];
         answer /= x;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         x = "";
     } else if (operator === "") {
         y = parseFloat(variable.join(""));
         z = Math.abs(y);
         answer = x - z;
-        document.getElementById("display").innerHTML = +answer.toFixed(3);
         y = "";
         x = "";
     }
@@ -277,6 +260,8 @@ function targetIdentity(e) {
         operator = "÷";
     } else if (e.target.id === "equals") {
         equals();
+    } if (answer < 10000000 && answer >= 0 && answer !== "") {
+        document.getElementById("display").innerHTML = +answer.toFixed(3);
     } if (answer > 10000000) {
         document.getElementById("display").innerHTML = answer.toExponential(3);
     } if (answer < 0 && answer !== "") {
